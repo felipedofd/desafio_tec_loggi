@@ -62,5 +62,10 @@ class Pacote:
         else:
             return "INVÁLIDO"
 
+    def funcao_despachar_produto(self):
+        if self.funcao_tipo_produto() == "Jóias" and self.funcao_origem() == "Centro-oeste":
+            return "INVÁLIDO"
+        else:
+            return "VÁLIDO"
 
 
