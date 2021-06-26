@@ -51,7 +51,7 @@ class Pacote:
             return "INVÁLIDO"
 
     def funcao_cod_valido(self):
-        if len(self.codigo) == 15 and self.funcao_origem() != "INVÁLIDO" and self.funcao_destino() != "INVÁLIDO" and self.funcao_tipo_produto() != "INVÁLIDO":
+        if len(self.codigo) == 15 and self.funcao_origem() != "INVÁLIDO" and self.funcao_destino() != "INVÁLIDO" and self.funcao_tipo_produto() != "INVÁLIDO" and self.funcao_cod_vendedor() != "584" and self.funcao_despachar_produto() != "INVÁLIDO":
             return "VÁLIDO"
         else:
             return "INVÁLIDO"
