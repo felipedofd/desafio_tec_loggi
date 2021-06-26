@@ -29,6 +29,20 @@ def funcao_agrupar_pacote_regiao(pacotes):
     lista_agrupada.extend(lista_centro_oeste)
 
     return lista_agrupada
+
+
+def funcao_pacotes_enviados_vendedor(pacotes):
+    dicionario_vendedores = {}
+
+    for pacote in pacotes:
+        if pacote.funcao_cod_valido() == "VÁLIDO":
+            if pacote.funcao_cod_vendedor() in dicionario_vendedores:
+                dicionario_vendedores[pacote.funcao_cod_vendedor()] = dicionario_vendedores[
+                                                                          pacote.funcao_cod_vendedor()] + 1
+            else:
+                dicionario_vendedores[pacote.funcao_cod_vendedor()] = 1
+
+    return dicionario_vendedores
 def main():
     pacotes = [
         Pacote('888555555123888'), Pacote('333333555584333'), Pacote('222333555124000'),
