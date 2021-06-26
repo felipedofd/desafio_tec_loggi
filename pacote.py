@@ -33,3 +33,6 @@ class Pacote:
     def funcao_cod_loggi(self):
         return self.codigo[6:9]
 
+    def funcao_cod_vendedor(self):
+        return self.codigo[9:12]
+
