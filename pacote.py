@@ -36,3 +36,16 @@ class Pacote:
     def funcao_cod_vendedor(self):
         return self.codigo[9:12]
 
+    def funcao_tipo_produto(self):
+        if self.codigo[12:15] == "000":
+            return "Jóias"
+        elif self.codigo[12:15] == "111":
+            return "Livros"
+        elif self.codigo[12:15] == "333":
+            return "Eletrônicos"
+        elif self.codigo[12:15] == "555":
+            return "Bebidas"
+        elif self.codigo[12:15] == "888":
+            return "Brinquedos"
+        else:
+            return "INVÁLIDO"
