@@ -57,10 +57,10 @@ class Pacote:
             return "INVÁLIDO"
 
     def funcao_existe_produto_regiao(self, origem, produto):
-        if (self.funcao_origem() == origem and self.funcao_tipo_produto() == produto):
-            return "Tem " + produto + " na Região " + origem
+        if self.funcao_origem() == origem and self.funcao_tipo_produto() == produto:
+            return "VÁLIDO"
         else:
-            return "Não Tem " + produto + " na Região " + origem
+            return "INVÁLIDO"
 
 
 
