@@ -55,3 +55,12 @@ class Pacote:
             return "VÁLIDO"
         else:
             return "INVÁLIDO"
+
+    def funcao_existe_produto_regiao(self, origem, produto):
+        if (self.funcao_origem() == origem and self.funcao_tipo_produto() == produto):
+            return "Tem " + produto + " na Região " + origem
+        else:
+            return "Não Tem " + produto + " na Região " + origem
+
+
+
