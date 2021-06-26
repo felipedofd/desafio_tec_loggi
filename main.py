@@ -43,6 +43,14 @@ def funcao_pacotes_enviados_vendedor(pacotes):
                 dicionario_vendedores[pacote.funcao_cod_vendedor()] = 1
 
     return dicionario_vendedores
+
+
+def funcao_relatorio_tipo_destino(pacotes):
+    for pacote in funcao_agrupar_pacote_regiao(pacotes):
+        if pacote.funcao_cod_valido() == "VÁLIDO":
+            print("Região Destino: " + pacote.funcao_destino() + " - Tipo: " + pacote.funcao_tipo_produto())
+
+
 def main():
     pacotes = [
         Pacote('888555555123888'), Pacote('333333555584333'), Pacote('222333555124000'),
