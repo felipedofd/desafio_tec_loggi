@@ -49,3 +49,9 @@ class Pacote:
             return "Brinquedos"
         else:
             return "INVÁLIDO"
+
+    def funcao_cod_valido(self):
+        if len(self.codigo) == 15 and self.funcao_origem() != "INVÁLIDO" and self.funcao_destino() != "INVÁLIDO" and self.funcao_tipo_produto() != "INVÁLIDO":
+            return "VÁLIDO"
+        else:
+            return "INVÁLIDO"
