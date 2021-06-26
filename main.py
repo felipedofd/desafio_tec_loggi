@@ -60,5 +60,37 @@ def main():
         Pacote("111888555123555"), Pacote("888000555845333"), Pacote("000111555874000")
     ]
 
+    print("a) Identificar o destino de cada pacote:")
+    for pacote in pacotes:
+        print(pacote.funcao_destino())
+
+    print("b) Saber quais pacotes possuem códigos de barras válidos e/ou inválidos:")
+    for pacote in pacotes:
+        if pacote.funcao_cod_valido() == "VÁLIDO":
+            print(pacote.codigo)
+
+    print("c) Identificar se algum pacote que tem como origem a região Sul tem Brinquedos em seu conteúdo:")
+    tem_brinquedos = False
+    for pacote in pacotes:
+        if pacote.funcao_existe_produto_regiao("Sul", "Brinquedos") == "VÁLIDO":
+            tem_brinquedos = True
+    if tem_brinquedos:
+        print("Tem Brinquedos na Região Sul")
+    else:
+        print("Não tem Brinquedos na Região Sul")
+
+    print("d) Listar os pacotes agrupados por região de destino (Considere apenas pacotes válidos):")
+    lista_agrupados = funcao_agrupar_pacote_regiao(pacotes)
+    for pacote in lista_agrupados:
+        print(pacote.codigo + " - Região: " + pacote.funcao_destino())
+
+    print("e) Listar o número de pacotes enviados por cada vendedor (Considere apenas pacotes válidos):")
+    dicionario_vendedores = funcao_pacotes_enviados_vendedor(pacotes)
+    for chave in dicionario_vendedores:
+        print(chave + " Pacotes enviados: " + str(dicionario_vendedores[chave]))
+
+    print("f) Gerar o relatório/lista de pacotes por destino e por tipo (Considere apenas pacotes válidos):")
+    funcao_relatorio_tipo_destino(pacotes)
+
 
 main()
