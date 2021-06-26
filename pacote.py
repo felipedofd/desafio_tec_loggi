@@ -29,3 +29,7 @@ class Pacote:
             return "Sul"
         else:
             return "INVÁLIDO"
+
+    def funcao_cod_loggi(self):
+        return self.codigo[6:9]
+
